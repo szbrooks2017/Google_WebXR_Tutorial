@@ -9,7 +9,6 @@
   <!-- three.js -->
   <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
   <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="/lib/dat.gui.min.js"></script>
 </head>
 <body>
 
@@ -45,15 +44,11 @@ async function activateXR() {
 // adding for hit test
 const scene = new THREE.Scene();
 // adding for debug
-var gui = new dat.GUI();
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
-directionalLight.position.set(13, 20, 0);
+directionalLight.position.set(13, 20, 20);
 
 // gui for debug
-gui.add(directionalLight, 'x', 0, 20);
-gui.add(directionalLight, 'y', 0, 20);
-gui.add(directionalLight, 'z', 0, 20);
 scene.add(directionalLight);
 
 // Set up the WebGLRenderer, which handles rendering to the session's base layer.
