@@ -107,7 +107,6 @@ loader.load("assets/Avocado/glTF-Binary/Avocado.glb", function(gltf) {
 session.addEventListener("select", (event) => {
   if (flower) {
     const clone = flower.clone();
-    clone.scale(0.1, 0.1, 0.1);
     clone.position.copy(reticle.position);
     scene.add(clone);
   }
