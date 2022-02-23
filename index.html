@@ -92,7 +92,7 @@ const hitTestSource = await session.requestHitTestSource({ space: viewerSpace })
 // Use the model loader from the previous step to load a targeting reticle and a sunflower from the web.
 const loader = new THREE.GLTFLoader();
 let reticle;
-loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function(gltf) {
+loader.load("assets/scene.gltf", function(gltf) {
   reticle = gltf.scene;
   reticle.visible = false;
   scene.add(reticle);
