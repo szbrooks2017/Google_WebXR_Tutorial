@@ -99,7 +99,7 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
 })
 
 let flower;
-loader.load("assets/jellyfish/scene.gltf", function(gltf) {
+loader.load("assets/Avocado/glTF/Avocado.gltf", function(gltf) {
   flower = gltf.scene;
 });
 
@@ -108,6 +108,8 @@ session.addEventListener("select", (event) => {
   if (flower) {
     const clone = flower.clone();
     clone.position.copy(reticle.position);
+    console.log(clone);
+    clone.scale.set(10, 10, 10);
     scene.add(clone);
   }
 });
